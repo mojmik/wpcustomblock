@@ -5,10 +5,10 @@
   blocks.registerBlockType(
 
     // The name of our block. Must be a string with prefix. Example: my-plugin/my-custom-block.
-    'mka/ramecek', {
+    'mka/fancy-image-link', {
 
     // The title of our block.
-    title: i18n.__('MKA-ramecek'),
+    title: i18n.__('Fancy image link'),
 
     // Dashicon icon for our block.
     icon: 'megaphone',
@@ -21,8 +21,8 @@
       testimonial: {
         type: 'array',
         source: 'children',
-        selector: 'div.mkazjistitvic-text',
-        default: 'Zjistit více'
+        selector: 'div.mka-find-more-text',
+        default: 'Find more'
       },
       mediaID: {
         type: 'number'
@@ -56,7 +56,7 @@
       };
 
       const urlText = el( TextControl, {
-        label: 'Adresa odkazu',
+        label: 'Link url',
         value: props.attributes.url,
         key: 'url',
         onChange: function( value ) {
@@ -86,7 +86,7 @@
             el(wp.blockEditor.RichText, {
               tagName: 'div',
               inline: true,
-              placeholder: i18n.__('Napiste text odkazu...'),
+              placeholder: i18n.__('Insert link text...'),
               value: attributes.testimonial,
               onChange: function (newTestimonial) {
                 props.setAttributes({ testimonial: newTestimonial });
@@ -107,8 +107,8 @@
         el('div', { className: ['mkablock2', props.className].join(' ') },          
           el('a', { href: attributes.url, className: '' },
             el('img', { src: attributes.mediaURL }),
-            el('div', { className: 'mkazjistit-vic'},
-              el('div', { className: 'mkazjistitvic-text' }, attributes.testimonial)           
+            el('div', { className: 'mka-find-more'},
+              el('div', { className: 'mka-find-more-text' }, attributes.testimonial)           
             )
           ),          
         )

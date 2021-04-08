@@ -1,0 +1,40 @@
+.mka-find-more {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.mka-find-more div {
+  background-color: #ffd000;
+  color: #000;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight:700;
+}
+.mkablock2 {  
+ opacity:1; 
+ position:relative;
+ margin: 0 auto;
+ text-align: center;
+ margin-bottom: 20px;
+}
+.mkablock2 img {
+	width:100%;
+	height:auto;
+}
+.mkablock2:hover img {  
+ opacity:0.4;
+ -webkit-transition: opacity 500ms linear;
+ -ms-transition: opacity 500ms linear;
+ transition: opacity 500ms linear;
+}
+.mkablock2:hover .mka-find-more {  
+ opacity:1;
+ -webkit-transition: opacity 500ms linear;
+ -ms-transition: opacity 500ms linear;
+ transition: opacity 500ms linear;
+} 
