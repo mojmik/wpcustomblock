@@ -1,6 +1,6 @@
 <?php
    /*
-   Plugin Name: Custom read more image effect block
+   Plugin Name: Custom block fancy image link
    Plugin URI: https://www.cyltr.com/wp-custom-read-more-block/
    description: Adds custom block option to Guttenberg with fancy custom image and read more link. 
    Version: 1.2
